@@ -75,10 +75,9 @@ class Moderation(commands.Cog):
 
         await interaction.response.send_message(f"{fin_msg} for user {member.mention}")
 
-    @staticmethod
     @app_commands.default_permissions(use_application_commands=True)
     @app_commands.checks.has_permissions(use_application_commands=True)
-    async def report_message(interaction: discord.Interaction, message: discord.Message) -> None:
+    async def report_message(self, interaction: discord.Interaction, message: discord.Message) -> None:
         await interaction.response.send_message(
             f'Thanks for reporting this message by {message.author.mention} to our moderators.', ephemeral=True
         )

@@ -61,7 +61,7 @@ async def main():
     async with ClientSession() as our_client:
         # 2. We become responsible for starting the bot.
         print(f"<Starting>")
-        extensions = ["members", "fun", "greetings", "events", "moderation"]
+        extensions = ["members", "fun", "greetings", "events", "moderation", "music"]
         async with ChillBot(commands.when_mentioned,
                             web_client=our_client,
                             initial_extensions=extensions,
